@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		1B2282FC27FD343600DA93BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2282FB27FD343600DA93BE /* AppDelegate.swift */; };
 		1B2282FE27FD343600DA93BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2282FD27FD343600DA93BE /* SceneDelegate.swift */; };
-		1B22830027FD343600DA93BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2282FF27FD343600DA93BE /* ViewController.swift */; };
-		1B22830327FD343600DA93BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22830127FD343600DA93BE /* Main.storyboard */; };
 		1B22830527FD343700DA93BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22830427FD343700DA93BE /* Assets.xcassets */; };
 		1B22830827FD343700DA93BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22830627FD343700DA93BE /* LaunchScreen.storyboard */; };
 		1B22831327FD343700DA93BE /* RestaurantMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22831227FD343700DA93BE /* RestaurantMapTests.swift */; };
 		1B22831D27FD343700DA93BE /* RestaurantMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22831C27FD343700DA93BE /* RestaurantMapUITests.swift */; };
 		1B22831F27FD343700DA93BE /* RestaurantMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22831E27FD343700DA93BE /* RestaurantMapUITestsLaunchTests.swift */; };
+		1B22832E27FD376E00DA93BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22832C27FD376E00DA93BE /* HomeViewController.swift */; };
+		1B22832F27FD376E00DA93BE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B22832D27FD376E00DA93BE /* HomeViewController.xib */; };
+		1B22834027FD447100DA93BE /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833727FD447100DA93BE /* Inter-Regular.ttf */; };
+		1B22834127FD447100DA93BE /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833827FD447100DA93BE /* Inter-Bold.ttf */; };
+		1B22834227FD447100DA93BE /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833927FD447100DA93BE /* Inter-Light.ttf */; };
+		1B22834327FD447100DA93BE /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833A27FD447100DA93BE /* Inter-Black.ttf */; };
+		1B22834427FD447100DA93BE /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833B27FD447100DA93BE /* Inter-SemiBold.ttf */; };
+		1B22834527FD447100DA93BE /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833C27FD447100DA93BE /* Inter-ExtraLight.ttf */; };
+		1B22834627FD447100DA93BE /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833D27FD447100DA93BE /* Inter-ExtraBold.ttf */; };
+		1B22834727FD447100DA93BE /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833E27FD447100DA93BE /* Inter-Medium.ttf */; };
+		1B22834827FD447100DA93BE /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B22833F27FD447100DA93BE /* Inter-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		1B2282F827FD343600DA93BE /* RestaurantMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2282FB27FD343600DA93BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B2282FD27FD343600DA93BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B2282FF27FD343600DA93BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1B22830227FD343600DA93BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B22830427FD343700DA93BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B22830727FD343700DA93BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B22830927FD343700DA93BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		1B22831827FD343700DA93BE /* RestaurantMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B22831C27FD343700DA93BE /* RestaurantMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapUITests.swift; sourceTree = "<group>"; };
 		1B22831E27FD343700DA93BE /* RestaurantMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B22832C27FD376E00DA93BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1B22832D27FD376E00DA93BE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1B22833727FD447100DA93BE /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		1B22833827FD447100DA93BE /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		1B22833927FD447100DA93BE /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		1B22833A27FD447100DA93BE /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		1B22833B27FD447100DA93BE /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		1B22833C27FD447100DA93BE /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		1B22833D27FD447100DA93BE /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		1B22833E27FD447100DA93BE /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		1B22833F27FD447100DA93BE /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +117,9 @@
 		1B2282FA27FD343600DA93BE /* RestaurantMap */ = {
 			isa = PBXGroup;
 			children = (
-				1B2282FB27FD343600DA93BE /* AppDelegate.swift */,
-				1B2282FD27FD343600DA93BE /* SceneDelegate.swift */,
-				1B2282FF27FD343600DA93BE /* ViewController.swift */,
-				1B22830127FD343600DA93BE /* Main.storyboard */,
-				1B22830427FD343700DA93BE /* Assets.xcassets */,
-				1B22830627FD343700DA93BE /* LaunchScreen.storyboard */,
-				1B22830927FD343700DA93BE /* Info.plist */,
+				1B22832B27FD34E700DA93BE /* Application */,
+				1B22833027FD377500DA93BE /* Scener */,
+				1B22833227FD392800DA93BE /* Resources */,
 			);
 			path = RestaurantMap;
 			sourceTree = "<group>";
@@ -125,6 +139,59 @@
 				1B22831E27FD343700DA93BE /* RestaurantMapUITestsLaunchTests.swift */,
 			);
 			path = RestaurantMapUITests;
+			sourceTree = "<group>";
+		};
+		1B22832B27FD34E700DA93BE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1B2282FD27FD343600DA93BE /* SceneDelegate.swift */,
+				1B2282FB27FD343600DA93BE /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1B22833027FD377500DA93BE /* Scener */ = {
+			isa = PBXGroup;
+			children = (
+				1B22833527FD3F9300DA93BE /* Home */,
+			);
+			path = Scener;
+			sourceTree = "<group>";
+		};
+		1B22833227FD392800DA93BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B22833627FD445E00DA93BE /* Font */,
+				1B22830427FD343700DA93BE /* Assets.xcassets */,
+				1B22830627FD343700DA93BE /* LaunchScreen.storyboard */,
+				1B22830927FD343700DA93BE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B22833527FD3F9300DA93BE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1B22832C27FD376E00DA93BE /* HomeViewController.swift */,
+				1B22832D27FD376E00DA93BE /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1B22833627FD445E00DA93BE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1B22833A27FD447100DA93BE /* Inter-Black.ttf */,
+				1B22833827FD447100DA93BE /* Inter-Bold.ttf */,
+				1B22833D27FD447100DA93BE /* Inter-ExtraBold.ttf */,
+				1B22833C27FD447100DA93BE /* Inter-ExtraLight.ttf */,
+				1B22833927FD447100DA93BE /* Inter-Light.ttf */,
+				1B22833E27FD447100DA93BE /* Inter-Medium.ttf */,
+				1B22833727FD447100DA93BE /* Inter-Regular.ttf */,
+				1B22833B27FD447100DA93BE /* Inter-SemiBold.ttf */,
+				1B22833F27FD447100DA93BE /* Inter-Thin.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +299,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B22830827FD343700DA93BE /* LaunchScreen.storyboard in Resources */,
+				1B22834127FD447100DA93BE /* Inter-Bold.ttf in Resources */,
 				1B22830527FD343700DA93BE /* Assets.xcassets in Resources */,
-				1B22830327FD343600DA93BE /* Main.storyboard in Resources */,
+				1B22834027FD447100DA93BE /* Inter-Regular.ttf in Resources */,
+				1B22834427FD447100DA93BE /* Inter-SemiBold.ttf in Resources */,
+				1B22834627FD447100DA93BE /* Inter-ExtraBold.ttf in Resources */,
+				1B22834227FD447100DA93BE /* Inter-Light.ttf in Resources */,
+				1B22832F27FD376E00DA93BE /* HomeViewController.xib in Resources */,
+				1B22834827FD447100DA93BE /* Inter-Thin.ttf in Resources */,
+				1B22834527FD447100DA93BE /* Inter-ExtraLight.ttf in Resources */,
+				1B22834727FD447100DA93BE /* Inter-Medium.ttf in Resources */,
+				1B22834327FD447100DA93BE /* Inter-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B22830027FD343600DA93BE /* ViewController.swift in Sources */,
 				1B2282FC27FD343600DA93BE /* AppDelegate.swift in Sources */,
 				1B2282FE27FD343600DA93BE /* SceneDelegate.swift in Sources */,
+				1B22832E27FD376E00DA93BE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +373,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1B22830127FD343600DA93BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B22830227FD343600DA93BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1B22830627FD343700DA93BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +509,7 @@
 				INFOPLIST_FILE = RestaurantMap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +536,7 @@
 				INFOPLIST_FILE = RestaurantMap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
