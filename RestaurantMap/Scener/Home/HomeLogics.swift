@@ -10,13 +10,14 @@ import GooglePlaces
 
 // MARK: Display logic
 protocol HomeDisplayLogic: BusinessLogic {
-    func showMarker()
+    func displayRestaurantsNearbyLocation(_ restaurants: [Restaurant])
 }
 
 // MARK: BusinessLogic
 protocol HomeBusinessLogic: BusinessLogic {
     var presenter: HomePresentationLogic? { get set }
-    func fetchMarker()
+    
+    func getRestaurantsNearbyLocation(latitude: Double, longitude: Double)
 }
 
 // MARK: Presenter logic
@@ -24,11 +25,10 @@ protocol HomePresentationLogic: PresentationLogic {
     var view: HomeDisplayLogic? { get set }
     var router: HomeRoutingLogic? { get set }
     
-    func fetchMarkerSuccess()
-    func fetchCurrentPlaceSuccess(placesClient: GMSPlacesClient)
+    func getRestaurantsNearbyLocationSuccess(_ restaurants: [Restaurant])
 }
 
 // MARK: Routing logic
 protocol HomeRoutingLogic: RoutingLogic {
-    func showRestaurantDetail()
+    func goToRestaurantDetail()
 }

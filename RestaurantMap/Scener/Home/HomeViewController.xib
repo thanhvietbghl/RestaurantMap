@@ -2,14 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="RestaurantMap" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="vUK-tg-zeG" id="Ymg-Ez-RSe"/>
                 <outlet property="view" destination="057-f0-AR0" id="36M-UY-UMd"/>
             </connections>
         </placeholder>
@@ -18,20 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-hU-nFL">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-tg-zeG" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="09f-3Z-VIp"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
-                <constraint firstItem="09f-3Z-VIp" firstAttribute="bottom" secondItem="Af0-hU-nFL" secondAttribute="bottom" id="1XZ-nu-hjo"/>
-                <constraint firstItem="Af0-hU-nFL" firstAttribute="top" secondItem="09f-3Z-VIp" secondAttribute="top" id="ZCK-ni-Twr"/>
-                <constraint firstItem="Af0-hU-nFL" firstAttribute="leading" secondItem="09f-3Z-VIp" secondAttribute="leading" id="ZYj-lg-a4G"/>
-                <constraint firstItem="09f-3Z-VIp" firstAttribute="trailing" secondItem="Af0-hU-nFL" secondAttribute="trailing" id="scc-tL-HIo"/>
+                <constraint firstAttribute="trailing" secondItem="vUK-tg-zeG" secondAttribute="trailing" id="KUq-3Z-a1m"/>
+                <constraint firstAttribute="bottom" secondItem="vUK-tg-zeG" secondAttribute="bottom" id="SGx-zW-D3F"/>
+                <constraint firstItem="vUK-tg-zeG" firstAttribute="top" secondItem="057-f0-AR0" secondAttribute="top" id="X8m-t9-aew"/>
+                <constraint firstItem="vUK-tg-zeG" firstAttribute="leading" secondItem="057-f0-AR0" secondAttribute="leading" id="aAG-ZU-qCJ"/>
             </constraints>
-            <point key="canvasLocation" x="-442" y="51"/>
+            <point key="canvasLocation" x="-442.02898550724643" y="50.892857142857139"/>
         </view>
     </objects>
     <resources>

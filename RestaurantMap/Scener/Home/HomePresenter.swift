@@ -9,16 +9,14 @@ import Foundation
 import GooglePlaces
 
 class HomePresenter: HomePresentationLogic {
- 
+  
     weak var view: HomeDisplayLogic?
     weak var router: HomeRoutingLogic?
     
-    func fetchMarkerSuccess() {
+    func getRestaurantsNearbyLocationSuccess(_ restaurants: [Restaurant]) {
         DispatchQueue.main.async { [weak self] in
-            self?.view?.showMarker()
+            guard let self = self else { return }
+            self.view?.displayRestaurantsNearbyLocation(restaurants)
         }
-    }
-    
-    func fetchCurrentPlaceSuccess(placesClient: GMSPlacesClient) {
     }
 }

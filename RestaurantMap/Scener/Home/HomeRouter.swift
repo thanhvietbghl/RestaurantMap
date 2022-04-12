@@ -11,7 +11,8 @@ import UIKit
 class HomeRouter: HomeRoutingLogic {
     
     weak var navigationController: UINavigationController?
-
-    func showRestaurantDetail() {
+    
+    func goToRestaurantDetail() {
+        navigationController?.present(RestaurantViewController(), animated: true)
     }
 }

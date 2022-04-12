@@ -6,17 +6,20 @@
 //
 
 import Foundation
-import GooglePlaces
+import RxSwift
 
-class HomeInteraction: HomeBusinessLogic {
+class HomeInteractor: HomeBusinessLogic {
+   
+    var presenter: HomePresentationLogic?
     
-    weak var presenter: HomePresentationLogic?
+    private let repository = RestaurantRepository()
+    let disposeBag = DisposeBag()
     
-    private var placesClient: GMSPlacesClient!
-    
-    func fetchMarker() {
-    }
-    
-    func getCurrentPlace() {
+    func getRestaurantsNearbyLocation(latitude: Double, longitude: Double) {
+        repository.getRestaurantsNearbyLocation(latitude: latitude, longitude: longitude)
+            .subscribe(onNext: { [weak self] restaurants in
+                guard let self = self else { return }
+                self.presenter?.getRestaurantsNearbyLocationSuccess(restaurants)
+            }).disposed(by: disposeBag)
     }
 }
