@@ -8,6 +8,11 @@ target 'RestaurantMap' do
   # Pods for RestaurantMap
   pod 'GoogleMaps', '6.1.1'
   pod 'GooglePlaces', '6.1.1'
+  pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxAlamofire'
 
   target 'RestaurantMapTests' do
     inherit! :search_paths
