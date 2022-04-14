@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     var zoomLevel: Float = 17
     var locationManager = CLLocationManager()
     var camera = GMSCameraPosition()
-    var currentLocationCoordinate: CLLocationCoordinate2D?
+    var currentLocation: CLLocation?
     var restaurantMarkers = [GMSMarker]()
     
     override func viewDidLoad() {
@@ -119,16 +119,14 @@ extension HomeViewController: HomeDisplayLogic {
 
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let coordinate = locations.last?.coordinate,
-              currentLocationCoordinate?.latitude != coordinate.latitude,
-              currentLocationCoordinate?.longitude != coordinate.longitude
+        guard let location = locations.last,
+              (currentLocation?.distance(from: location) ?? 101) > 100
         else { return }
-        currentLocationCoordinate = coordinate
-        
-        updateCamera(locationCoordinate: coordinate)
+        currentLocation = location
+        updateCamera(locationCoordinate: location.coordinate)
         cleanMarker()
         showMainMarker()
-        fetchRestaurantsNearbyLocation(locationCoordinate: coordinate)
+        fetchRestaurantsNearbyLocation(locationCoordinate: location.coordinate)
     }
 }
 
