@@ -13,6 +13,7 @@ target 'RestaurantMap' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxAlamofire'
+  pod 'Kingfisher'
 
   target 'RestaurantMapTests' do
     inherit! :search_paths

@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 class RestaurantInteractor: RestaurantBusinessLogics {
     
     var presenter: RestaurantPresentationLogics?
-    
 }

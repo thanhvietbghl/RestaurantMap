@@ -13,20 +13,20 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     
-    fileprivate var interactor: HomeBusinessLogic!
-    fileprivate var router: HomeRoutingLogic!
+    private var interactor: HomeBusinessLogic!
+    private var router: HomeRoutingLogic!
+    private var restaurants: [Restaurant] = []
     
-    var zoomLevel: Float = 17
-    var locationManager = CLLocationManager()
+    var zoomLevel: Float = 18
     var camera = GMSCameraPosition()
-    var currentLocation: CLLocation?
     var restaurantMarkers = [GMSMarker]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLogicLayers()
         setupMapView()
-        setupLocationManager()
+        setupLocationDefault()
+        fetchRestaurantsNearbyLocation(locationCoordinate: GoogleMaps.defaultLocation.coordinate)
     }
     
     func setupLogicLayers() {
@@ -53,27 +53,19 @@ class HomeViewController: UIViewController {
           }
     }
     
-    private func setupLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        locationManager.delegate = self
-    }
-    
     private func updateCamera(locationCoordinate: CLLocationCoordinate2D) {
         camera = GMSCameraPosition.camera(withLatitude: locationCoordinate.latitude,
                                           longitude: locationCoordinate.longitude,
                                           zoom: zoomLevel)
-    }
-    
-    private func cleanMarker() {
         if mapView.isHidden {
           mapView.isHidden = false
           mapView.camera = camera
         } else {
           mapView.animate(to: camera)
         }
+    }
+    
+    private func clearMapView() {
         mapView.clear()
         restaurantMarkers.forEach({ $0.map = nil })
     }
@@ -94,39 +86,34 @@ class HomeViewController: UIViewController {
         restaurantMarkers.forEach({ $0.map = nil })
         restaurantMarkers.removeAll()
         for restaurant in restaurants {
-            let coordinate = CLLocationCoordinate2D(latitude: restaurant.geometry.location.lat, longitude: restaurant.geometry.location.lng)
+            let coordinate = CLLocationCoordinate2D(latitude: restaurant.coordinates.latitude, longitude: restaurant.coordinates.longitude)
             let marker = GMSMarker()
             marker.position = coordinate
-            marker.icon = UIImage(named: "current_marker_icon")
+            marker.icon = UIImage(named: "restaurant_marker_icon")
             marker.title = restaurant.name
-            marker.snippet = restaurant.plusCode.compoundCode
+            marker.snippet = restaurant.location.address
             marker.map = mapView
             self.restaurantMarkers.append(marker)
         }
     }
     
+    private func setupLocationDefault() {
+        updateCamera(locationCoordinate: GoogleMaps.defaultLocation.coordinate)
+        clearMapView()
+        showMainMarker()
+    }
+    
     deinit {
-        cleanMarker()
+        clearMapView()
     }
 }
 
+// add comment mark ....
 extension HomeViewController: HomeDisplayLogic {
     
     func displayRestaurantsNearbyLocation(_ restaurants: [Restaurant]) {
         self.setupMarkersForRestaurants(restaurants: restaurants)
-    }
-}
-
-extension HomeViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last,
-              (currentLocation?.distance(from: location) ?? 101) > 100
-        else { return }
-        currentLocation = location
-        updateCamera(locationCoordinate: location.coordinate)
-        cleanMarker()
-        showMainMarker()
-        fetchRestaurantsNearbyLocation(locationCoordinate: location.coordinate)
+        self.restaurants = restaurants
     }
 }
 
@@ -134,7 +121,7 @@ extension HomeViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         updateCamera(locationCoordinate: coordinate)
-        cleanMarker()
+        clearMapView()
         showMainMarker()
         fetchRestaurantsNearbyLocation(locationCoordinate: coordinate)
     }
@@ -145,7 +132,11 @@ extension HomeViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        router.goToRestaurantDetail()
+        guard let restaurant = self.restaurants.first(where: {
+            $0.coordinates.latitude == marker.position.latitude &&
+            $0.coordinates.longitude == marker.position.longitude })
+        else { return }
+        router.goToRestaurantDetail(restaurant: restaurant)
         mapView.selectedMarker = nil
     }
     

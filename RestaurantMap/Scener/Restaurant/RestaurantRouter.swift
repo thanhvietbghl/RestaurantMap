@@ -11,4 +11,18 @@ import UIKit
 class RestaurantRouter: RestaurantRoutingLogics {
     
     weak var navigationController: UINavigationController?
+    
+    func callPhoneNumber(_ phoneNumber: String) {
+        if let url = URL(string: "telprompt://\(phoneNumber)"),
+           UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    func openWebsite(_ url: String) {
+        if let url = URL(string: url),
+           UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
 }

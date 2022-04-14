@@ -9,7 +9,7 @@ import Foundation
 
 class APIURL {
     
-    private static let googleMapHost = "https://maps.googleapis.com/maps/api/place"
-
-    static let restaurants = googleMapHost + "/nearbysearch/json"
+    private static let baseYelpURL = "https://api.yelp.com/v3/"
+    
+    static let restaurants = baseYelpURL + "businesses/search"
 }

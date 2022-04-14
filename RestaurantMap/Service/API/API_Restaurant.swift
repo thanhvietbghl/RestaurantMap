@@ -18,13 +18,11 @@ extension APIService {
 class NearbyRestaurantsInput: APIBaseInput {
     init(latitude: Double,
          longitude: Double) {
-        let location = "\(latitude),\(longitude)"
-        let params = [
-            "location": location,
+        let params: [String : Any] = [
+            "latitude": latitude,
+            "longitude": longitude,
             "radius": GoogleMaps.restaurantsNearbyRadius,
-            "type": "restaurant",
-            "key": APIConfig.googleMapAPIKey
-        ] as [String : Any]
+        ]
         super.init(urlString: APIURL.restaurants,
                    method: .get,
                    parameters: nil,
@@ -39,6 +37,6 @@ class RestaurantsNearbyOutput: APIBaseOutput {
 
     override func mapping(map: Map) {
         super.mapping(map: map)
-        restaurants <- map["results"]
+        restaurants <- map["businesses"]
     }
 }
