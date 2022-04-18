@@ -144,6 +144,9 @@ extension APIService {
                 input.urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? urlString
                 print(input.urlString)
             }
+            var headers: HTTPHeaders = [:]
+            headers["Authorization"] = "Bearer \(APIConfig.yelpAPIKey)"
+            input.headers = headers
             return Observable.just(input)
         }
     }

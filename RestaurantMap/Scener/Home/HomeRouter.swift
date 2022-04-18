@@ -12,7 +12,9 @@ class HomeRouter: HomeRoutingLogic {
     
     weak var navigationController: UINavigationController?
     
-    func goToRestaurantDetail() {
-        navigationController?.present(RestaurantViewController(), animated: true)
+    func goToRestaurantDetail(restaurant: Restaurant) {
+        let restaurantVC = RestaurantViewController()
+        restaurantVC.restaurant = restaurant
+        navigationController?.present(restaurantVC, animated: true)
     }
 }

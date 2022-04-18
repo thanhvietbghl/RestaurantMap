@@ -17,7 +17,7 @@ class RestaurantRepository {
                 if let restaurants = output.restaurants {
                     return restaurants
                 }
-                throw APIResponseError.message(output.message)
+                throw APIResponseError.invalidResponseData
         }
     }
 }

@@ -8,6 +8,5 @@
 import Foundation
 
 class APIConfig {
-    static let googleMapAPIKey = "AIzaSyDSpc8dL_0NY_RfQSdMtlsTo-nGEQiJeZg"
-    static let baseGoogleMapURL = "https://maps.googleapis.com/maps/api/place/"
+    static let yelpAPIKey = "rn3hcdL-aoWHS_Jdazy5BbtuxltJ5yqAgaktY2c3VYtSBuMbIfoo36e8JLUlSqcS5UebOLtejSuKhGpgj2LEnhViVdQFJe2KgDg-HhPFhcgEzkUJicE4zaPSDdPoXnYx"
 }

@@ -30,5 +30,5 @@ protocol HomePresentationLogic: PresentationLogic {
 
 // MARK: Routing logic
 protocol HomeRoutingLogic: RoutingLogic {
-    func goToRestaurantDetail()
+    func goToRestaurantDetail(restaurant: Restaurant)
 }

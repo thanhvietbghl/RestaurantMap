@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import GooglePlaces
 
 struct GoogleMaps {
-    static let restaurantsNearbyRadius = 150
+    static let APIKey = "AIzaSyDSpc8dL_0NY_RfQSdMtlsTo-nGEQiJeZg"
+    static let restaurantsNearbyRadius = 50
+    static let defaultLocation = CLLocation(latitude: 40.72953713199664, longitude: -73.98723805856109)
 }

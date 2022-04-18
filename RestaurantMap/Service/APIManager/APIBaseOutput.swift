@@ -10,14 +10,12 @@ import ObjectMapper
 
 class APIBaseOutput: Mappable {
     
-    var status: String = ""
     var message: String = ""
     
     required init?(map: Map) {
     }
 
     func mapping(map: Map) {
-        status <- map["status"]
         message <- map["error_message"]
     }
 

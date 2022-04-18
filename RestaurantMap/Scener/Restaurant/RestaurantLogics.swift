@@ -24,4 +24,6 @@ protocol RestaurantPresentationLogics: PresentationLogic {
 
 // MARK: Routing logic
 protocol RestaurantRoutingLogics: RoutingLogic {
+    func callPhoneNumber(_ phoneNumber: String)
+    func openWebsite(_ url: String)
 }
